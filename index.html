@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Raginc, seorang pelajar Malaysia berumur 16 tahun yang sedang belajar pembangunan permainan.">
+    <meta name="description" content="Raginc Portfolio OMG!">
     <meta name="keywords" content="Raginc, Game Development, Web Development, Portfolio">
 
     <title>Raginc</title>
@@ -11,8 +11,8 @@
 
         body {
             background-color: #032032;
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             min-height: 100vh;
         }
 
@@ -21,12 +21,18 @@
             padding: 20px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            box-sizing: border-box;
+            min-width: 1000px;
+
         }
 
         .sticky-header {
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
 
         .homeBtn {
@@ -69,9 +75,9 @@
         }
 
         .pImage {
-            width: 275px;
+            max-width: 275px;
             height: 250px;
-            padding-top: 50px;
+            padding-top: 20px;
         }
 
         .pText {
@@ -79,12 +85,14 @@
             font-family: Arial;
             font-size: 15px;
             text-align: center;
+            animation: fadeIn 1s ease-in;
         }
 
         .divider {
             border: 10px solid #05283c;
             border-radius: 50px;
             margin: 15px;
+            width: 100%;
         }
 
         div p {
@@ -102,15 +110,17 @@
             text-align: center;
             display: flex;
             opacity: 100%;
-            padding: 15px 0;
+            padding: 25px 0;
             flex: 1;
+            flex-wrap: wrap;
         }
 
         .fooText {
-            padding-left: 50px;
+            padding-left: 20px;
+            padding-right: 50px;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 17px;
+            font-size: 15px;
             opacity: 50%;
         }
 
@@ -118,7 +128,6 @@
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             margin: auto;
-            margin-right: 270px;
             opacity: 50%;
         }
 
@@ -127,8 +136,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             text-align: center;
             border-radius: 100%;
             fill: white;
@@ -142,11 +151,11 @@
         section {
             width: 100%;
             height: 850px;
+            min-width: 1000px;
         }
 
         .picOfMe {
             width: 30%;
-            height: 600px;
             background-color: white;
             margin-left: 125px;
             margin-bottom: 200px;
@@ -154,6 +163,7 @@
 
         .container {
             width: 100%;
+            min-width: 1000px;
             height: 100%;
             display: flex;
             justify-content: flex-start;
@@ -189,7 +199,7 @@
         .mainProject {
             background-color: white;
             width: 30%;
-            height: 600px;
+            height: auto;
             margin-left: 100px;
             margin-top: -150px;
         }
@@ -206,10 +216,14 @@
         }
 
         .flexPics {
-            padding-left: 175px;
-            padding-top: 50px;
             width: 150px;
             height: 150px;
+            object-fit: cover;
+        }
+
+        .about-me-container {
+            display: flex;
+            gap: 5px;
         }
 
         @keyframes fadeIn {
@@ -217,31 +231,25 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .pText {
-            animation: fadeIn 1s ease-in;
-        }
+        @media (max-width: 800px) {
 
-        @media (max-width: 768px) { /* For tablets and smaller screens */
-            body {
-                font-size: 14px;
-            }
-            .navbar {
-                flex-direction: column;
-            }
             .navButton {
-                padding: 10px 5px;
+                padding: 0;
             }
-        }
 
-        @media (max-width: 480px) { /* For phones */
-            .pImage {
-                width: 100%;
-                height: auto;
+            .abtText {
+                font-size: 13px;
             }
-            .expText, .picOfMe {
-                width: 100%;
-                margin: 0;
+
+            .container {
+                display: grid;
             }
+
+            .about-me-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 10px;
+    }
         }
 
     </style>
@@ -269,8 +277,8 @@
 
     <!-- Raginc -->
 
-    <center><img src="https://media.tenor.com/fPfYP38Yn4MAAAAM/piplup-run-see-you-pokemon-cute-happy-sunnysb.gif" alt="Raginc's Character or smth" class="pImage"></center>
-    <br>
+    <center><div><img src="https://media.tenor.com/fPfYP38Yn4MAAAAM/piplup-run-see-you-pokemon-cute-happy-sunnysb.gif" alt="Raginc's Character or smth" class="pImage"></center>
+    </div><br>
     <div class="pText">
         <h1>Hi 👋 | I'm Raginc</h1>
     </div>
@@ -280,7 +288,7 @@
 
     <center>
         <div class="abtText aboutMe">Just a regular 16 year old Malaysian with a passion in game developing</div>
-        <div class="container">
+        <div class="about-me-container">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6xXO7DsQ747UNVIJvDGOjgLu_w0G5mOPXg&s" alt="" class="flexPics">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6xXO7DsQ747UNVIJvDGOjgLu_w0G5mOPXg&s" alt="" class="flexPics">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6xXO7DsQ747UNVIJvDGOjgLu_w0G5mOPXg&s" alt="" class="flexPics">
@@ -349,8 +357,9 @@
     <!-- Footer -->
 
     <footer>
-        <p class="fooText">Raginc's <br>Website</p>
-        <p class="socials"><br>Socials<br>
+        <div style="justify-content: flex-start; display: flex;">
+        <span class="fooText"><br><br>Raginc's Website</span>
+        <span class="socials"><br>Socials
             <a href="https://youtube.com/@raginc6626">
                 <svg role="img" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
@@ -366,7 +375,8 @@
             <a href="https://github.com/Ragincs">
                 <svg role="img" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             </a>
-        </p>
+        </span>
+        </div>
     </footer>
 
 </body>
