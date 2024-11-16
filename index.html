@@ -221,6 +221,29 @@
             animation: fadeIn 1s ease-in;
         }
 
+        @media (max-width: 768px) { /* For tablets and smaller screens */
+            body {
+                font-size: 14px;
+            }
+            .navbar {
+                flex-direction: column;
+            }
+            .navButton {
+                padding: 10px 5px;
+            }
+        }
+
+        @media (max-width: 480px) { /* For phones */
+            .pImage {
+                width: 100%;
+                height: auto;
+            }
+            .expText, .picOfMe {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
