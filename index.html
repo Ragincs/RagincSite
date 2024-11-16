@@ -3,13 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Raginc</title>
+    <style>
+
+        body {
+            background-color: #032032;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar {
+            background-color: #001725;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .homeBtn {
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 50px;
+            background: transparent;
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            font-family: Arial;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0;
+            fill: white;
+        }
+
+        .homeBtn:hover {
+            background-color: white;
+            fill: black;
+            transform: scale(1.2) translateY(-5px);
+        }
+
+        .navButton {
+            text-align: center;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            color: white;
+            padding: 5px 15px;
+            margin: 0 10px;
+            transition: 0.5s ease;
+            border: 3px solid transparent;
+            display: inline-block;
+        }
+
+        .navButton:hover {
+            color: limegreen;
+            transform: scale(1.3) translateY(-5px);
+        }
+
+        .pImage {
+            width: 275px;
+            height: 250px;
+            padding-top: 50px;
+        }
+
+        .pText {
+            color: white;
+            font-family: Arial;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .divider {
+            border: 10px solid #05283c;
+            border-radius: 50px;
+            margin: 15px;
+        }
+
+        .abtContainerL {
+            background-color: #09334a;
+            width: 650px;
+            height: 250px;
+            margin-left: 50px;
+            float: left;
+            border:10px solid #063047;
+            border-radius: 30px;
+        }
+
+        .abtContainerR {
+            background-color: #09334a;
+            width: 650px;
+            height: 250px;
+            margin-right: 50px;
+            float: right;
+            border: 10px solid #063047;
+            border-radius: 30px;
+        }
+
+        div p {
+            padding-left: 20px;
+            padding-right: 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 25px;
+            letter-spacing: 1.29px;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #031a26;
+            text-align: center;
+            display: flex;
+            opacity: 100%;
+            padding: 5px;
+        }
+
+        .fooText {
+            padding-left: 50px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            opacity: 50%;
+        }
+
+        .socials {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            margin-right: 270px;
+            opacity: 50%;
+        }
+
+        .socials a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border-radius: 100%;
+            fill: white;
+        }
+
+        .socials a:hover {
+            background-color: white;
+            fill: black;
+        }
+
+        section {
+            width: 100%;
+            height: 850px;
+        }
+
+        .picOfMe {
+            width: 30%;
+            height: 600px;
+            background-color: white;
+            margin-left: 125px;
+            margin-bottom: 200px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .textHeads {
+            text-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            padding-top: 65px;
+        }
+
+        .expText {
+            background-color: #01273e;
+            width: 53%;
+            height: 600px;
+            margin-left: 50px;
+            margin-bottom: 200px;
+        }
+
+        .listText {
+            text-align: left;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .mainProject {
+            background-color: white;
+            width: 30%;
+            height: 600px;
+            margin-left: 100px;
+            margin-top: -150px;
+        }
+
+        .containedImg {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
 </head>
 <body>
 
     <!-- Header-->
-    <header class="sticky-header">
+    <header class="sticky-header" id="top">
         <div class="navbar">
             <nav>
                 <a href="index.html" type="button" class="homeBtn">
@@ -17,7 +227,11 @@
                 </a>
 
                 <a href="#experience" type="button" class="navButton">
-                    Experience
+                    <b>Experience</b>
+                </a>
+
+                <a href="#projects" type="button" class="navButton">
+                    <b>Projects</b>
                 </a>
             </nav>
         </div>
@@ -76,16 +290,34 @@
                     <ul class="listText">
                         <li>Learned <span style="color: lightskyblue;">My</span><span style="color: orange;">SQL</span>, <span style="color: #c97400;">HT</span><span style="color: #fd9910;">ML</span>, <span style="color: #004bc7;">CS</span><span style="color: #2676f9;">S</span>, <span style="color: #c21d00;">Ja</span><span style="color: #0557d6;">va</span>, <span style="color: #c6b700;">Java</span><span style="color: yellow;">Script</span> and <span style="color: #688db3;">P</span>H<span style="color: #688db3;">P</span></li>
                         <li>Hand-made some websites ( Like this one )</li>
-                        <li>Entered a coding competition trial ( Won 4th place )</li>
+                        <li>Entered a KVSkill trial ( Won 4th place ) , with the other top 5 winners being seniors</li>
                         <li>Still learning and getting better at it everyday</li>
                     </ul>
+                    <br>
+                    <span class="pText">Vocational College Pointers ( Max = 4.00 )</span>
+                    <ul class="listText">
+                        <li>Semester 1 ~~~ 3.70</li>
+                        <li>Semester 2 ~~~</li>
+                        <li>Semester 3 ~~~</li>
+                        <li>Semester 4 ~~~</li>
+                    </ul>
+                    
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background-color: #021927;">
+    <hr class="divider" id="projects">
 
+    <!-- Projects -->
+
+    <section style="background-color: #021927;">
+        <h1 class="textHeads">Projects</h1>
+        <div class="container">
+            <div class="mainProject">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6xXO7DsQ747UNVIJvDGOjgLu_w0G5mOPXg&s" alt="Main Project" class="containedImg">
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
