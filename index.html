@@ -14,6 +14,7 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
+            overflow-x: hidden    ;
         }
 
         .navbar {
@@ -24,7 +25,7 @@
             justify-content: space-between;
             width: 100%;
             box-sizing: border-box;
-            min-width: 1000px;
+            max-width: 100vw;
 
         }
 
@@ -94,6 +95,7 @@
             margin: 15px;
             width: 100%;
             min-width: 1000px;
+            max-width: 100%;
         }
 
         div p {
@@ -153,6 +155,15 @@
             width: 100%;
             height: 850px;
             min-width: 1000px;
+            max-width: 100vw;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+            margin: 0 auto;
         }
 
         .picOfMe {
@@ -164,11 +175,12 @@
 
         .container {
             width: 100%;
-            min-width: 1000px;
-            height: 100%;
+            height: auto;
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            box-sizing: border-box;
+            max-width: 100vw;
         }
 
         .textHeads {
@@ -176,7 +188,7 @@
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 25px;
-            padding-top: 65px;
+            margin-bottom: 10px;
         }
 
         .expText {
@@ -199,32 +211,45 @@
 
         .mainProject {
             background-color: white;
-            width: 30%;
+            width: 90%;
+            max-width: 500px;
             height: auto;
-            margin-left: 100px;
-            margin-top: -150px;
+            display: flex;
+            box-sizing: border-box;
+            grid-template-columns: 1;
         }
 
         .containedImg {
             width: 100%;
-            height: 100%;
+            height: 50%;
+            display: grid;
+            object-fit: cover;  
         }
 
         .abtText {
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
+            text-align: center;
+            white-space: normal;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
         }
 
         .flexPics {
             width: 150px;
             height: 150px;
             object-fit: cover;
+            padding-top: 100px;
         }
 
         .about-me-container {
             display: flex;
-            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
         @keyframes fadeIn {
@@ -242,15 +267,60 @@
                 font-size: 13px;
             }
 
-            .container {
+            .about-me-container {
                 display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding-top: 0px;
+                padding: 75px;
+                gap: 25px;
             }
 
-            .about-me-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
+            section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
                 padding: 10px;
-    }
+                height: auto;
+            }
+
+            .textHeads {
+                font-size: 20px;
+                padding-top: 20px;
+                text-align: center;
+            }
+
+            .picOfMe {
+                width: 500px;
+                margin-bottom: 20px;
+                max-width: 100%;
+            }
+
+            .expText {
+                width: 90%;
+                margin: 10px 0;
+                padding: 20px;
+                height: auto;
+                background-color: #01273e;
+                max-width: 100%;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            .mainProject {
+                width: 90%;
+                margin: 10px 0;
+            }
+
+            .containedImg {
+                border-radius: 5px;
+            }
         }
 
     </style>
@@ -287,7 +357,6 @@
 
     <!-- About Me -->
 
-    <center>
         <div class="abtText aboutMe">Just a regular 16 year old Malaysian with a passion in game developing</div>
         <div class="about-me-container">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6xXO7DsQ747UNVIJvDGOjgLu_w0G5mOPXg&s" alt="" class="flexPics">
@@ -295,7 +364,6 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6xXO7DsQ747UNVIJvDGOjgLu_w0G5mOPXg&s" alt="" class="flexPics">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6xXO7DsQ747UNVIJvDGOjgLu_w0G5mOPXg&s" alt="" class="flexPics">
         </div>
-    </center>
 
     <br><br><br><br><br><br>
 
@@ -351,6 +419,7 @@
         <div class="container">
             <div class="mainProject">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6xXO7DsQ747UNVIJvDGOjgLu_w0G5mOPXg&s" alt="Main Project" class="containedImg">
+                <div class="about-me-container" style="background-color: wheat;"></div>
             </div>
         </div>
     </section>
