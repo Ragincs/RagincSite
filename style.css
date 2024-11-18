@@ -179,6 +179,10 @@ section {
     margin-bottom: 10px;
 }
 
+#exp {
+    margin-top: 150px;
+}
+
 .expText {
     background-color: #01273e;
     width: 53%;
@@ -281,7 +285,7 @@ html {
     justify-content: center;
     align-items: center;
     transform: translateY(100%);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .gridCards:hover .gridCardImg {
